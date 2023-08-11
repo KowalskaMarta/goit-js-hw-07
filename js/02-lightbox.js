@@ -15,15 +15,11 @@ const getImages = (img) => img.map((item) => genLiItem(item)).join("");
 
 gallery.innerHTML = getImages(galleryItems);
 
-gallery.addEventListener("click", onClickGallery);
 
 new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionDelay: 250,
 });
 
-function onClickGallery(e) {
-  e.preventDefault();
-}
 
 console.log(galleryItems);
